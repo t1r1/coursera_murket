@@ -1,0 +1,249 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.menu {
+  width: 30px;
+}
+.menu__item {
+  display: inline;
+}
+.container {
+  margin: 40px;
+}
+
+.item:hover {
+  opacity: 0.7;
+}
+
+.item__caption {
+  margin-top: 10px;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+.item__caption a:hover {
+  color: tomato;
+}
+
+.item__photo {
+  display: inline-block;
+  vertical-align: baseline;
+  height: 260px;
+}
+
+.item__photo:hover {
+  opacity: 0.7;
+}
+
+.item__photo::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  height: 100%;
+}
+
+.item__photo img {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 250px;
+}
+
+.item__category {
+  margin: 10px 0;
+}
+
+.item__category span {
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+.item__category span:hover {
+  color: tomato;
+  cursor: pointer;
+}
+
+.item {
+  margin: 10px 5px;
+  display: inline-block;
+  vertical-align: top;
+  width: 260px;
+}
+
+.item__price {
+  padding: 0;
+  display: inline-block;
+  width: 70%;
+  margin: 8px 0;
+}
+
+.price__actual {
+  display: inline-block;
+  /* float: left; */
+  /* width: 40%; */
+
+  color: crimson;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.price__past {
+  display: inline-block;
+  font-size: 11px;
+}
+
+.item__descr {
+  font-size: 11px;
+}
+/*sprite with stars*/
+.reviewStars-input input:checked ~ label,
+.reviewStars-input label,
+.reviewStars-input label:hover,
+.reviewStars-input label:hover ~ label {
+  background: url("http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png")
+    no-repeat;
+}
+
+.reviewStars-input {
+  width: 75px;
+  /*fix floating problems*/
+  overflow: hidden;
+  zoom: 1;
+  /*end of fix floating problems*/
+  /* 
+  position: relative;
+  float: left; */
+}
+
+.reviewStars-input input {
+  display: none;
+}
+
+.reviewStars-input input:checked ~ label {
+  background-position: 0 -12px;
+  background-size: 100%;
+  height: 12px;
+  width: 13px;
+}
+
+.reviewStars-input label {
+  background-position: 0 0;
+  background-size: 100%;
+  height: 12px;
+  width: 13px;
+  float: right;
+  cursor: pointer;
+  margin-right: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.reviewStars-input label:hover,
+.reviewStars-input label:hover ~ label {
+  background-position: 0 -12px;
+  height: 12px;
+  width: 13px;
+  background-size: 100%;
+}
+
+.reviewStars-input #star-0 {
+  left: 0px;
+}
+.reviewStars-input #star-1 {
+  left: 53px;
+}
+.reviewStars-input #star-2 {
+  left: 106px;
+}
+.reviewStars-input #star-3 {
+  left: 159px;
+}
+.reviewStars-input #star-4 {
+  left: 212px;
+}
+.reviewStars-input #star-5 {
+  left: 265px;
+}
+
+.reviewStars-input #star-6 {
+  left: 0px;
+}
+.reviewStars-input #star-7 {
+  left: 53px;
+}
+.reviewStars-input #star-8 {
+  left: 106px;
+}
+.reviewStars-input #star-9 {
+  left: 159px;
+}
+.reviewStars-input #star-10 {
+  left: 212px;
+}
+.reviewStars-input #star-11 {
+  left: 265px;
+}
+
+.price__past {
+  text-decoration: line-through;
+}
+
+#table,
+#list {
+  display: none;
+}
+
+input.options:checked {
+  border: 1px solid red;
+}
+.options:checked + label {
+  color: blue;
+}
+
+#list:checked ~ .item {
+  width: 100%;
+  display: block;
+}
+
+#list:checked ~ .item .item__photo {
+  vertical-align: top;
+  display: inline-block;
+  height: initial;
+}
+
+#list:checked ~ .item .item__info {
+  width: 35%;
+  display: inline-block;
+  padding: 0 0 0 3%;
+}
+
+#list:checked ~ .item .item__info .item__price {
+  padding: 0;
+  width: 34%;
+}
+
+#list:checked ~ .item .item__info .item__price::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  height: 100%;
+  position: absolute;
+}
+
+#list:checked ~ .item .item__descr {
+  display: inline-block;
+  width: 31%;
+  vertical-align: top;
+}
+
+#list:checked ~ .item__photo::before {
+  display: none;
+}
+
+#list:checked ~ .item .item__caption {
+  margin: 0;
+}
+
+#list:checked ~ .item .item__category {
+  margin: 0 0 10px;
+}
